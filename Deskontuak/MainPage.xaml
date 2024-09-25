@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Deskontuak.MainPage">
+
+    <ScrollView>
+        <Grid Padding="30,0" ColumnSpacing="25" RowSpacing="10">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Label Text="Kantitatea" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="End" />
+            <Entry x:Name="KantitateEntry" Placeholder="Input 1" Grid.Row="0" Grid.Column="1" WidthRequest="150" HorizontalOptions="Start" />
+
+            <Label Text="Prezioa" Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="End" />
+            <Entry x:Name="PrezioaEntry" Placeholder="Input 2" Grid.Row="1" Grid.Column="1" WidthRequest="150" HorizontalOptions="Start" />
+
+            <Label Text="Denera" Grid.Row="2" Grid.Column="0" HorizontalTextAlignment="End" />
+            <Entry x:Name="DeneraKPEntry" Placeholder="Input 3" Grid.Row="2" Grid.Column="1" WidthRequest="150" HorizontalOptions="Start" IsReadOnly="True" />
+
+            <Label Text="Deskontua(%)" Grid.Row="3" Grid.Column="0" HorizontalTextAlignment="End" />
+            <Entry x:Name="Deskontuaentry" Placeholder="Input 4" Grid.Row="3" Grid.Column="1" WidthRequest="150" HorizontalOptions="Start" />
+            <Label Text="Deskontua Total" Grid.Row="3" Grid.Column="2" HorizontalTextAlignment="End" />
+            <Entry x:Name="PrezioDeskontuEntry" Placeholder="0" Grid.Row="3" Grid.Column="3" WidthRequest="150" HorizontalOptions="Start" IsReadOnly="True" />
+
+            <Label Text="BEZ(%)" Grid.Row="4" Grid.Column="0" HorizontalTextAlignment="End" />
+            <Entry x:Name="BezEntry" Placeholder="Input 5" Grid.Row="4" Grid.Column="1" WidthRequest="150" HorizontalOptions="Start" />
+            <Label Text="BEZ Total" Grid.Row="4" Grid.Column="2" HorizontalTextAlignment="End" />
+            <Entry x:Name="BezTotalaEntry" Placeholder="0" Grid.Row="4" Grid.Column="3" WidthRequest="150" HorizontalOptions="Start" IsReadOnly="True" />
+
+            <Label Text="" Grid.Row="6" Grid.Column="0" />
+
+            <Label Text="Ordaintzeko denera" Grid.Row="7" Grid.Column="0" HorizontalTextAlignment="End" />
+            <Entry  x:Name="OrdaintzekoGuztiaEntry" Placeholder="Input 6" Grid.Row="7" Grid.Column="1" WidthRequest="150" HorizontalOptions="Start" IsReadOnly="True" />
+
+            <Grid Grid.Row="8" Grid.ColumnSpan="4" VerticalOptions="End" HorizontalOptions="Center">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="End">
+                    <Button Text="Kalkulatu" WidthRequest="100" Margin="5" Clicked="OnCalculateButtonClicked" />
+                    <Button Text="Irten" Clicked="Onirtenbutton" WidthRequest="100" Margin="5" />
+                </StackLayout>
+            </Grid>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>
